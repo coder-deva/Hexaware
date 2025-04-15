@@ -1,15 +1,15 @@
 package com.hexaware.petpals.main;
 
 import java.util.Scanner;
-import com.hexaware.petpals.dao.IDonationDAO;
+
 import com.hexaware.petpals.dao.DonationDAOImpl;
+import com.hexaware.petpals.dao.IDonationDAO;
 import com.hexaware.petpals.dao.IPetDAO;
 import com.hexaware.petpals.dao.PetDAOImpl;
 import com.hexaware.petpals.entity.CashDonation;
 import com.hexaware.petpals.entity.Cat;
 import com.hexaware.petpals.entity.Dog;
 import com.hexaware.petpals.entity.ItemDonation;
-import com.hexaware.petpals.entity.Pet;
 
 public class MainModule {
 
@@ -72,7 +72,7 @@ public class MainModule {
         scanner.close();
     }
 
-    // Method to add a pet
+   
     private static void addPet(Scanner scanner, IPetDAO petDAO) {
         System.out.print("Enter Pet Type (dog/cat): ");
         String type = scanner.nextLine().toLowerCase();
@@ -100,7 +100,7 @@ public class MainModule {
         }
     }
 
-    // Method to record a donation
+    
     private static void recordDonation(Scanner scanner, IDonationDAO donationDAO) {
         try {
             System.out.print("Enter Donor Name: ");
@@ -131,7 +131,7 @@ public class MainModule {
         }
     }
 
-    // Method to host the adoption event
+    
     private static void hostAdoptionEvent() {
         System.out.println("Hosting adoption event...");
         System.out.println("Participants: Shelter, Donors, Visitors");
